@@ -1,3 +1,10 @@
+/**
+ * @description Entry point to the server side code
+ *              
+ * @author JD
+ *     
+ */
+
 //The body-parser is an express middleware that parses the body and sets the body parameter on the request object
 var bodyParser = require('body-parser');
 var express = require('express');
