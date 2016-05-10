@@ -100,6 +100,15 @@ function saveInstructionSet(instructionSet) {
 }
 
 
+/** 
+ * Retrieve an existing InstructionSet
+ * @param  {String} the id of the InstructionSet
+ * @return {Object} the InstructionSet or undefined if not found
+ */
+function readInstructionSet(id) {
+    return store[id];
+}
+
 /**
  * Reads all the Instruction Sets
  * @returns {Array} An array of existing Instruction Sets

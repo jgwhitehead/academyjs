@@ -9,6 +9,27 @@ var store = require('./instructionServiceStore');
 var idHelper = require('./idHelper');
 var instructionSetValidator = require('./instructionSetValidator');
 
+/**
+ * Reads the instruction set with the given id
+ * @param {String} the id of the Instruction Set
+ * @return {Object} object indicating if the read was successful
+ */
+function readInstructionSet(id) {
+
+    var response = {};
+    var instructionSet = store.readInstructionSet(id);
+
+    if (!instructionSet) {
+        response.success = false;
+        response.errors = ['Instruction Set with id ' + id + ' does not exist'];
+    } else {
+        response.instructionSet = instructionSet;
+        response.success = true;
+    }
+
+    return response;
+}
+
 
 /**
  * Reads all the instruction sets
@@ -52,6 +73,6 @@ function saveInstructionSet(instructionSet) {
 
 
 
-
+exports.readInstructionSet = readInstructionSet;
 exports.saveInstructionSet = saveInstructionSet;
 exports.readAllInstructionSets = readAllInstructionSets;
