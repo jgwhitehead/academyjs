@@ -17,7 +17,8 @@ var instructionSetValidator = require('./instructionSetValidator');
 function readAllInstructionSets(id) {
 
     var response = {};
-    var instructionSets = store.readAllInstructionSets();
+
+    //TODO call the store to retrieve existing instruction sets
 
     response.instructionSets = instructionSets;
     response.success = true;
@@ -31,22 +32,8 @@ function readAllInstructionSets(id) {
  * @return {[type]}
  */
 function saveInstructionSet(instructionSet) {
-    var response = {};
-    response.errors = [];
-    response.success = true;
-
-    instructionSet.id = idHelper.guid();
-
-    var validationResponse = instructionSetValidator.validate(instructionSet);
-
-    if (!validationResponse.success) {
-        response.errors = response.errors.concat(validationResponse.errors);
-        response.success = false;
-    } else {
-        store.saveInstructionSet(instructionSet);
-    }
-
-    return response;
+    //TODO implement method to save an instructionSet to the store
+    //Use the instuctionSetValidator to validate the instruction set    
 }
 
 

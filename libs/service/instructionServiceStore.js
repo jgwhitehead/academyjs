@@ -96,7 +96,7 @@ store["1"] = {
  * @param {object} instructionSet The Instruction Set to save
  */
 function saveInstructionSet(instructionSet) {
-    store[instructionSet.id] = instructionSet;
+
 }
 
 
@@ -105,13 +105,7 @@ function saveInstructionSet(instructionSet) {
  * @returns {Array} An array of existing Instruction Sets
  */
 function readAllInstructionSets() {
-    var instructionSets = [];
 
-    for (var id in store) {
-        instructionSets.push(store[id]);
-    }
-
-    return instructionSets;
 }
 
 

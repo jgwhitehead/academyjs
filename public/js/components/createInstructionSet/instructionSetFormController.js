@@ -33,27 +33,11 @@ var addEditController = function ($scope, $uibModalInstance, instructionSetResou
      */
     this.addInstruction = function (type) {
 
-        var instruction = {
-            'type': type
-        };
-
-        //If the user has selected to add a new change color instruction then default the color to
-        //white
-        if (type == 'changeColor') {
-            instruction.color = '#ffffff';
-        }
-
-        this.instructionSet.instructions.push(instruction);
+        //TODO implement function so that a new instruction is added to the instruction set
     };
 
-    /**
-     * Removes an Instruction from the Instruction Set
-     * @param {number} index The array index of the Instruction
-     */
-    this.removeInstruction = function (index) {
-        this.instructionSet.instructions.splice(index, 1);
-    };
 
+    //TODO create a removeInstruction function that will delete an instruction from an instruction set
 
     /**
      * Saves the changes. Either adds the new Instruction Set or updates the existing Instruction Set
@@ -62,19 +46,12 @@ var addEditController = function ($scope, $uibModalInstance, instructionSetResou
 
         //If the mode is 'add' then create a new instruction set
         if (mode == 'add') {
-            //Use the REST service to save the instruction set
-            instructionSetResource.save(instructionSet, function (response) {
-                $uibModalInstance.close();
-            }, function (response) {
-                ctrl.errors = response.data.errors;
-            });
+            //TODO Use the REST service to save the instruction set
+
+
         } else {
-            //Use the REST service to update the instruction set
-            instructionSetResource.update(instructionSet, function (response) {
-                $uibModalInstance.close();
-            }, function (response) {
-                ctrl.errors = response.data.errors;
-            });
+
+
         }
 
     };

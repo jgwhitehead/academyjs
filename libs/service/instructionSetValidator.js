@@ -26,13 +26,7 @@ function validate(instructionSet) {
         response.errors.push("No id set for instructionSet");
     }
 
-    if (!instructionSet.name || instructionSet.name.length === 0) {
-        response.errors.push("No name provided for instructionSet");
-    }
-
-    if (!instructionSet.description || instructionSet.description.length === 0) {
-        response.errors.push("No description provided for instructionSet");
-    }
+    //TODO validate name and description
 
     if (!instructionSet.instructions || instructionSet.instructions.length === 0) {
         response.errors.push("You must provide at least one instruction");

@@ -16,13 +16,7 @@ var app = GLOBAL.app;
  */
 app.get('/instructionset', function (req, res) {
 
-    var getInstructionSetsResponse = instructionService.readAllInstructionSets();
-
-    if (getInstructionSetsResponse.success) {
-        res.status(HTTP_CONSTANTS.SUCCESS).json(getInstructionSetsResponse);
-    } else {
-        res.status(HTTP_CONSTANTS.NOT_FOUND).json(getInstructionSetsResponse);
-    }
+    //TODO call the service layer to get all existing instruction sets
 
 });
 
@@ -30,12 +24,9 @@ app.get('/instructionset', function (req, res) {
  * Saves an Instruction Set
  */
 app.post('/instructionset/', function (req, res) {
-    var saveInstructionSetResponse = instructionService.saveInstructionSet(req.body);
 
-    if (saveInstructionSetResponse.success) {
-        res.status(HTTP_CONSTANTS.SUCCESS).json(saveInstructionSetResponse);
-    } else {
-        res.status(HTTP_CONSTANTS.ERROR).json(saveInstructionSetResponse);
-    }
+    //TODO call the service layer to save the instrutcion set. 
+
+
 
 });
