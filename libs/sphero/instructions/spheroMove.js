@@ -5,15 +5,6 @@
  *     
  */
 
-/**
- * Move the Sphero
- * @param {object}   instruction The Move instruction
- * @param {function} callback    function to call once the instruction has been executed
- */
-function move(instruction, callback) {
-    orb.roll(instruction.speed, instruction.direction);
-    setTimeout(callback, 1000);
-}
 
 /**
  * Validate that the instruction is correctly structured
@@ -38,5 +29,4 @@ function validate(instruction, instructionIndex, errors) {
 }
 
 exports.validate = validate;
-exports.execute = move;
 exports.key = "move";

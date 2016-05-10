@@ -28,7 +28,6 @@ if (!process.argv[2]) {
 app.use(bodyParser.json());
 
 var instructionSetResource = require('./libs/rest/InstructionSetResource');
-var instructionSetExecutionResource = require('./libs/rest/InstructionSetExecutionResource');
 
 app.listen(3000, function () {
     console.log('Application is running on port 3000');

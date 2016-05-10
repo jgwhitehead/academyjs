@@ -99,30 +99,6 @@ function saveInstructionSet(instructionSet) {
     store[instructionSet.id] = instructionSet;
 }
 
-/** 
- * Retrieve an existing InstructionSet
- * @param  {String} the id of the InstructionSet
- * @return {Object} the InstructionSet or undefined if not found
- */
-function readInstructionSet(id) {
-    return store[id];
-}
-
-/** 
- * Deletes an exiting InstructionSet
- * @param  {[type]} id The id of the Instruction Set to delete
- */
-function deleteInstructionSet(id) {
-    delete store[id];
-}
-
-/** 
- * Update an existing InstructionSet
- * @param  {[type]} instructionSet [description]
- */
-function updateInstructionSet(instructionSet) {
-    store[instructionSet.id] = instructionSet;
-}
 
 /**
  * Reads all the Instruction Sets
@@ -140,7 +116,4 @@ function readAllInstructionSets() {
 
 
 exports.saveInstructionSet = saveInstructionSet;
-exports.readInstructionSet = readInstructionSet;
-exports.deleteInstructionSet = deleteInstructionSet;
-exports.updateInstructionSet = updateInstructionSet;
 exports.readAllInstructionSets = readAllInstructionSets;
