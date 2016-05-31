@@ -1,0 +1,19 @@
+{
+  "name": "academyjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgwhitehead/academyjs.git"
+  },
+  "author": "jgwhitehead",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgwhitehead/academyjs/issues"
+  },
+  "homepage": "https://github.com/jgwhitehead/academyjs#readme"
+}
