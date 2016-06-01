@@ -1,9 +1,9 @@
 /**
  * @description In memory store for holding instruction sets. Used as an alternative to mongo or other
  *              database for simplicity of implementation for this task.
- *              
+ *
  * @author JD
- *     
+ *
  */
 
 var store = {};
@@ -96,7 +96,7 @@ store["1"] = {
  * @param {object} instructionSet The Instruction Set to save
  */
 function saveInstructionSet(instructionSet) {
-
+  store[instructionSet.id] = instructionSet;
 }
 
 
@@ -105,7 +105,11 @@ function saveInstructionSet(instructionSet) {
  * @returns {Array} An array of existing Instruction Sets
  */
 function readAllInstructionSets() {
-
+  var storeArray = [];
+  for (var id in store){
+    storeArray.push(store[id]);
+  }
+  return storeArray;
 }
 
 
